@@ -31,7 +31,6 @@
 
 ## 1. 集成方式
 
- 集成demo地址: [HHVDoctorSDK-demo](https://github.com/homedr/HHVDoctorSDK-demo)
 
 由于呼叫视频需要相机相册权限，需要在info.plist中添加对应的权限，否则会导致无法调用。
 
@@ -49,7 +48,7 @@
 
 ```shell
 use_frameworks!
-pod 'HHVDoctorSDK', :git => "http://code.hh-medic.com/hh_public/hhvDoctorSDK.ios.git", :branch => 'develop'
+pod 'HHVDoctorSDK', :git => "http://code.hh-medic.com/hh_public/hhvDoctorSDK.ios.git"
 ```
 * 安装
 
