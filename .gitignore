@@ -17,6 +17,8 @@ DerivedData/
 !default.perspectivev3
 xcuserdata/
 
+HHVDoctorSDK-demo/Pods
+
 ## Other
 *.moved-aside
 *.xccheckout

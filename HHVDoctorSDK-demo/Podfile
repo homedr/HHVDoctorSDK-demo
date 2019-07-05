@@ -1,0 +1,10 @@
+platform :ios, '9.0'
+
+target 'HHVDoctorSDK-demo' do
+  use_frameworks!
+
+  pod 'HHVDoctorSDK', :git => "http://code.hh-medic.com/hh_public/hhvDoctorSDK.ios.git"
+
+  pod 'SnapKit'
+
+end
