@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import hhVDcotorSDK
+import hhVDoctorSDK
 
 let testToken = "28EDBCB5CCA747460573FAC3BF6B637D3F0D04F68EA2608F6783B874E4F50EEF"
 
@@ -32,6 +32,8 @@ class ViewController: UIViewController {
             }
         }
         
+        HHMSDK.default.add(delegate: self)
+        
     }
 
     @IBAction func doStartCall(_ sender: UIButton) {
@@ -49,3 +51,44 @@ class ViewController: UIViewController {
     
 }
 
+
+
+extension ViewController: HHMVideoDelegate {
+    func onFail(error: Error) {
+        print("---- error: \(error.localizedDescription)")
+    }
+    
+    func onCancel() {
+        print("----- onCancel")
+    }
+    
+    func callDidFinish() {
+        print("---- callDidFinish")
+    }
+    
+    func onExtensionDoctor() {
+        print("---- onExtensionDoctor")
+    }
+    
+    func onReceive(_ callID: String) {
+        print("---- onReceive:\(callID)")
+    }
+    
+    func onResponse(_ accept: Bool) {
+        print("---- onResponse:\(accept)")
+    }
+    
+    func onLeakPermission(_ type: PermissionType) {
+        print("---- onLeakPermission:\(type)")
+    }
+    
+    func callDidEstablish() {
+        print("----- callDidEstablish")
+    }
+    
+    func callStateChange(_ state: HHMCallingState) {
+        print("------- callStateChange\(state)")
+    }
+    
+    
+}

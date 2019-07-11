@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import hhVDcotorSDK
+import hhVDoctorSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
