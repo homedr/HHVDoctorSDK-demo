@@ -1,7 +1,7 @@
 PODS:
-  - HHVDoctorSDK (2.1.2):
-    - HHVDoctorSDK/Base (= 2.1.2)
-  - HHVDoctorSDK/Base (2.1.2)
+  - HHVDoctorSDK (2.1.22):
+    - HHVDoctorSDK/Base (= 2.1.22)
+  - HHVDoctorSDK/Base (2.1.22)
   - SnapKit (4.2.0)
 
 DEPENDENCIES:
@@ -18,11 +18,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   HHVDoctorSDK:
-    :commit: d07563951f69a0eb6554358bc5b1a486edb35334
+    :commit: 71d464833af765f17fc7d1a5e2336a93b88c2e98
     :git: http://code.hh-medic.com/hh_public/hhvDoctorSDK.ios.git
 
 SPEC CHECKSUMS:
-  HHVDoctorSDK: f1326822e3e4f49f8b54b693926a6f9e43043cd4
+  HHVDoctorSDK: 337551d77f0837db798c23893d1b046bceb0bd89
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
 PODFILE CHECKSUM: db7540ee836536e663cfa5bc958e6dab864290cf

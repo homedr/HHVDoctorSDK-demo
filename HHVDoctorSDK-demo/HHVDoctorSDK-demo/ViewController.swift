@@ -51,9 +51,11 @@ class ViewController: UIViewController {
     
 }
 
-
-
 extension ViewController: HHMVideoDelegate {
+    func onFail(_ errorCode: Int32, errrorStr: String?) {
+        print("---- onFail :\(errorCode), \(errrorStr)")
+    }
+    
     func onFail(error: Error) {
         print("---- error: \(error.localizedDescription)")
     }
