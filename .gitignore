@@ -19,6 +19,8 @@ xcuserdata/
 
 HHVDoctorSDK-demo/Pods
 
+.DS_Store
+
 ## Other
 *.moved-aside
 *.xccheckout

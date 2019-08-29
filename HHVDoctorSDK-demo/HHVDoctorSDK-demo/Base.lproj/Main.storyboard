@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZYR-2V-JOc">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--腾讯SDK demo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HHVDoctorSDK_demo" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,33 +18,155 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxj-oW-h6g">
-                                <rect key="frame" x="191.5" y="433" width="31" height="30"/>
-                                <state key="normal" title="呼叫"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxj-oW-h6g">
+                                <rect key="frame" x="144.5" y="426" width="125" height="40"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.36470588240000001" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="G8T-89-owM"/>
+                                    <constraint firstAttribute="height" constant="40" id="owu-6l-yvI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="呼叫">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="doStartCall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8eT-q8-ku0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mln-q4-o1R">
-                                <rect key="frame" x="176" y="488" width="62" height="30"/>
-                                <state key="normal" title="病历列表"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mln-q4-o1R">
+                                <rect key="frame" x="144.5" y="491" width="125" height="40"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.36470588240000001" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="CZB-lQ-aiI"/>
+                                    <constraint firstAttribute="width" constant="125" id="U15-0a-HH7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="病历列表">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="doJump2Medic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="egx-UO-jGR"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mWL-bm-Wn2">
+                                <rect key="frame" x="138.5" y="138" width="137" height="29"/>
+                                <segments>
+                                    <segment title="测试环境"/>
+                                    <segment title="正式环境"/>
+                                </segments>
+                                <connections>
+                                    <action selector="doChangeEnv:" destination="BYZ-38-t0r" eventType="valueChanged" id="C1F-3O-bri"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P28-Fz-9wJ">
+                                <rect key="frame" x="144.5" y="336" width="125" height="40"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.36470588240000001" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3xj-nL-vA1"/>
+                                    <constraint firstAttribute="width" constant="125" id="kLv-IS-RLq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="登录">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="doLoginIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z9h-u2-kj1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Xo-04-dft">
+                                <rect key="frame" x="30" y="817" width="354" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4FN-mC-Tz4">
+                                <rect key="frame" x="40" y="186" width="334" height="115"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="d4M-1u-21H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLb-Cx-JIa">
+                                <rect key="frame" x="144.5" y="556" width="125" height="40"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.36470588240000001" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="k09-6l-RHI"/>
+                                    <constraint firstAttribute="width" constant="125" id="mQF-UJ-RLP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="所有病历">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="doJumpAllMedic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="smx-Vd-hyd"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Nxj-oW-h6g" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0Us-Ei-x3G"/>
+                            <constraint firstItem="mWL-bm-Wn2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7QK-Uk-gnX"/>
+                            <constraint firstItem="P28-Fz-9wJ" firstAttribute="top" secondItem="4FN-mC-Tz4" secondAttribute="bottom" constant="35" id="AAt-Sr-uXc"/>
+                            <constraint firstItem="mLb-Cx-JIa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C67-q2-pYn"/>
+                            <constraint firstItem="4Xo-04-dft" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fjj-o5-tZ8"/>
+                            <constraint firstItem="4Xo-04-dft" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Jlt-6Q-b75"/>
+                            <constraint firstItem="mWL-bm-Wn2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="McX-xl-KcD"/>
                             <constraint firstItem="Mln-q4-o1R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nxs-ff-fc0"/>
+                            <constraint firstItem="Nxj-oW-h6g" firstAttribute="top" secondItem="P28-Fz-9wJ" secondAttribute="bottom" constant="50" id="OzB-8F-lg6"/>
+                            <constraint firstItem="mLb-Cx-JIa" firstAttribute="top" secondItem="Mln-q4-o1R" secondAttribute="bottom" constant="25" id="Yb0-XO-9Ct"/>
                             <constraint firstItem="Mln-q4-o1R" firstAttribute="top" secondItem="Nxj-oW-h6g" secondAttribute="bottom" constant="25" id="cDo-kh-Lta"/>
+                            <constraint firstItem="4FN-mC-Tz4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dIS-Vm-8KZ"/>
+                            <constraint firstItem="4FN-mC-Tz4" firstAttribute="top" secondItem="mWL-bm-Wn2" secondAttribute="bottom" constant="20" id="lYc-U8-vdX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4Xo-04-dft" secondAttribute="bottom" constant="45" id="oAm-At-pt2"/>
+                            <constraint firstItem="4FN-mC-Tz4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="pSy-eX-GTv"/>
                             <constraint firstItem="Nxj-oW-h6g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qzA-Mj-M0C"/>
+                            <constraint firstItem="P28-Fz-9wJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vY7-Sk-Oco"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="腾讯SDK demo" id="uFn-Xe-vjW">
+                        <barButtonItem key="leftBarButtonItem" title="退出" id="cxp-dK-eWS">
+                            <connections>
+                                <action selector="doLogout:" destination="BYZ-38-t0r" id="2Vu-fN-Iza"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="日志" id="1xj-KV-tFa">
+                            <connections>
+                                <action selector="doCheckLogs:" destination="BYZ-38-t0r" id="kLr-m3-B9r"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mAllMedicBtn" destination="mLb-Cx-JIa" id="oVZ-Wg-Kje"/>
+                        <outlet property="mCallBtn" destination="Nxj-oW-h6g" id="BIN-9g-oUN"/>
+                        <outlet property="mDescLbl" destination="4Xo-04-dft" id="g56-mL-wzd"/>
+                        <outlet property="mInputTxt" destination="4FN-mC-Tz4" id="Gxh-4o-hw2"/>
+                        <outlet property="mLoginBtn" destination="P28-Fz-9wJ" id="vYT-T2-w4p"/>
+                        <outlet property="mMedicBtn" destination="Mln-q4-o1R" id="tA4-9r-REi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="957.97101449275374" y="20.758928571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3J8-fc-hNh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZYR-2V-JOc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="utl-li-miy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="klz-HL-Lha"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YP6-91-zeo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-288" y="21"/>
         </scene>
     </scenes>
 </document>

@@ -16,10 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
         let option = HHSDKOptions(productId: "9001", isDebug: true, isDevelop: true)
-        HHMSDK.default.start(option: option)
         
+        /// 日志记录
+        option.logCallback = {
+            HHLogManager.default.ddLog($0)
+        }
+        
+        HHMSDK.default.start(option: option)
         
         return true
     }

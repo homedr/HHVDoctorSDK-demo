@@ -1,0 +1,38 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "打包并上传到fir"
+  lane :to_fir do
+
+    increment_build_number_in_plist(target: "HHVDoctorSDK-demo")
+    increment_version_number_in_plist(
+      target: "HHVDoctorSDK-demo",
+      version_number: '2.2.4'
+    )
+
+    gym(
+      output_directory: './firim',
+      export_options: {
+        method: "development", # 指定打包方式
+      },
+      scheme: "HHVDoctorSDK-demo"
+    )
+
+    firim(firim_api_token: "04d1464bebc619538a9bb43a62a2d572")
+  end
+end

@@ -15,6 +15,7 @@
 		951FD77922CEF77A006CCCDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 951FD77722CEF77A006CCCDB /* LaunchScreen.storyboard */; };
 		951FD78222CEFB2C006CCCDB /* HHWebBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951FD78122CEFB2C006CCCDB /* HHWebBrowser.swift */; };
 		951FD78422CEFB31006CCCDB /* calling.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 951FD78322CEFB31006CCCDB /* calling.mp3 */; };
+		95B84B5A230D269A00AEEDAB /* HHLogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B84B59230D269A00AEEDAB /* HHLogManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		951FD77A22CEF77A006CCCDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		951FD78122CEFB2C006CCCDB /* HHWebBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHWebBrowser.swift; sourceTree = "<group>"; };
 		951FD78322CEFB31006CCCDB /* calling.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = calling.mp3; sourceTree = "<group>"; };
+		95B84B59230D269A00AEEDAB /* HHLogManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHLogManager.swift; sourceTree = "<group>"; };
 		D380CBF8B16D16ECA2F8B9EC /* Pods_HHVDoctorSDK_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HHVDoctorSDK_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9890F6CD2FDC9D7564E765E /* Pods-HHVDoctorSDK-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHVDoctorSDK-demo.debug.xcconfig"; path = "Target Support Files/Pods-HHVDoctorSDK-demo/Pods-HHVDoctorSDK-demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +100,7 @@
 			children = (
 				951FD78322CEFB31006CCCDB /* calling.mp3 */,
 				951FD78122CEFB2C006CCCDB /* HHWebBrowser.swift */,
+				95B84B59230D269A00AEEDAB /* HHLogManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -137,6 +140,11 @@
 				TargetAttributes = {
 					951FD76A22CEF778006CCCDB = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -238,6 +246,7 @@
 			files = (
 				951FD77122CEF778006CCCDB /* ViewController.swift in Sources */,
 				951FD76F22CEF778006CCCDB /* AppDelegate.swift in Sources */,
+				95B84B5A230D269A00AEEDAB /* HHLogManager.swift in Sources */,
 				951FD78222CEFB2C006CCCDB /* HHWebBrowser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,6 +398,7 @@
 				DEVELOPMENT_TEAM = 773A426V2P;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "HHVDoctorSDK-demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -409,6 +419,7 @@
 				DEVELOPMENT_TEAM = 773A426V2P;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "HHVDoctorSDK-demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

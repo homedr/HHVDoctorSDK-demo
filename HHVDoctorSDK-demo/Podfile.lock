@@ -1,30 +1,49 @@
 PODS:
-  - HHVDoctorSDK (2.1.22):
-    - HHVDoctorSDK/Base (= 2.1.22)
-  - HHVDoctorSDK/Base (2.1.22)
+  - CocoaLumberjack (3.5.3):
+    - CocoaLumberjack/Core (= 3.5.3)
+  - CocoaLumberjack/Core (3.5.3)
+  - FileBrowser (1.0.0)
+  - HHVDoctorSDK (2.2.0):
+    - HHVDoctorSDK/Base (= 2.2.0)
+    - TXIMSDK_iOS
+  - HHVDoctorSDK/Base (2.2.0):
+    - TXIMSDK_iOS
   - SnapKit (4.2.0)
+  - SVProgressHUD (2.2.5)
+  - TXIMSDK_iOS (4.4.900)
 
 DEPENDENCIES:
-  - HHVDoctorSDK (from `http://code.hh-medic.com/hh_public/hhvDoctorSDK.ios.git`)
+  - CocoaLumberjack
+  - FileBrowser
+  - "HHVDoctorSDK (from `git@code.hh-medic.com:hh_public/hhvDoctorSDK.ios.git`)"
   - SnapKit
+  - SVProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - CocoaLumberjack
+    - FileBrowser
     - SnapKit
+    - SVProgressHUD
+    - TXIMSDK_iOS
 
 EXTERNAL SOURCES:
   HHVDoctorSDK:
-    :git: http://code.hh-medic.com/hh_public/hhvDoctorSDK.ios.git
+    :git: "git@code.hh-medic.com:hh_public/hhvDoctorSDK.ios.git"
 
 CHECKOUT OPTIONS:
   HHVDoctorSDK:
-    :commit: 71d464833af765f17fc7d1a5e2336a93b88c2e98
-    :git: http://code.hh-medic.com/hh_public/hhvDoctorSDK.ios.git
+    :commit: a32da6fe479eec848b8ef3b94b003bb719e9a4b2
+    :git: "git@code.hh-medic.com:hh_public/hhvDoctorSDK.ios.git"
 
 SPEC CHECKSUMS:
-  HHVDoctorSDK: 337551d77f0837db798c23893d1b046bceb0bd89
+  CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
+  FileBrowser: 2ca91ff61c9ea09665eb3b8f9e64a7a77e66a0bf
+  HHVDoctorSDK: 01f85f0181853edc3e15aa91ac2be64750214467
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  TXIMSDK_iOS: 54c04c0807ccf0c406366ef86cff663ea277e235
 
-PODFILE CHECKSUM: db7540ee836536e663cfa5bc958e6dab864290cf
+PODFILE CHECKSUM: 4d005e17c467557df4281d3efd2fc0975485fb3c
 
-COCOAPODS: 1.7.2
+COCOAPODS: 1.7.4
